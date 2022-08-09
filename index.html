@@ -14,14 +14,34 @@
 
 
 <body>
+    
 <style>
 .hide{
 display:none;
-}
+margin-top: 200px;
+color:black;
+font-size: 20px;
+font-weight: 600;
 
-body {background-color: rgb(0, 56, 15);
-	color: white;
-	/* margin-left: 20px;} */}
+}
+select{
+    margin:40px;
+    height: 50px;
+    border-radius: 20px;
+    background: linear-gradient(#0033ff89, #6f78fb);
+    background-color: rgb(0, 17, 255);
+    color:white;
+    opacity: 0.6;
+    
+    font-weight: 600;
+}
+body {background-color: rgb(62, 55, 251);
+    background-image: url(1048950.jpg) ;
+    background-size:cover;
+    background-repeat: no-repeat;
+	color: rgb(255, 255, 255);
+    font-family:sans-serif;
+	/* margin-left: 20px;}} */}
 div.main{
 		width: 400px;
 		margin: auto auto; }
@@ -35,6 +55,8 @@ margin-top: 30px;
 
 h2 {margin-bottom: 20px;
 margin-top: 20px;
+font-style: italic;
+font-weight: bold;
 }
 
 h3 {
@@ -47,15 +69,34 @@ margin-top: 10px;
 
 
 }
-
+div.transbox{
+    margin: 500px auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 255, 0.704);
+    border: 1px solid rgb(4, 4, 4);
+    opacity: 0.7;
+    width: 600px;
+    border-radius: 25px 25px 25px 25px;
+}
+#btn1{
+    border-color: black;
+    border-radius: 4px;
+    color:black;
+    background-color: ghostwhite;
+}
+p{
+    color: black;
+}
 
 </style>
 
 <div class="center">
 
 <center>
+    <center>
 <select id="select" onChange="handleSelection(value)" >
-<option selected>Please select one </option>
+<option selected>Please select one concentration term</option>
 <option value="div1">Molarity </option>
 <option value="div2">Molality </option>
 <option value="div3">Mass percent </option>
@@ -64,83 +105,86 @@ margin-top: 10px;
 <option value="div6">parts per billion </option>
 <option value="div7">Mole fraction </option>
 </select>
+<br><br>
+<center>
 
 <div class="hide" id="div1">
-
+<div class="transbox">
     <h2> MOLARITY </h2>
-    Number of Moles of Solute : <input type="text" id="a" /><br>
-    Volume of Solution(L) : <input type="text" id="b" /><br>
+    Number of Moles of Solute : <input type="number" id="a" /><br>
+    Volume of Solution(L) : <input type="number" id="b" /><br>
     <button onclick="fn1()" id = "btn1" class="btn btn-outline-light"> Click Me </button>
     
-    <h3 id="demo"></h1> 
+    <h3 id="demo"></h3> 
+        </div>
 </div>
 
 <div class="hide" id="div2">
-
+    <div class="transbox">
     <h2> MOLALITY </h2>
-    Number of Moles of Solute : <input type="text" id="c" /><br>
-    kilogram of solvent : <input type="text" id="d" /><br>
+    Number of Moles of Solute : <input type="number" id="c" /><br>
+    kilogram of solvent : <input type="number" id="d" /><br>
     <button onclick="fn2()" id = "btn1" class="btn btn-outline-light"> Click Me </button>
     
-    <h3 id="demo1"></h1> 
-
+    <h3 id="demo1"></h3> 
+        </div>
 </div>
 
 <div class="hide" id="div3">
-
+    <div class="transbox">
     <h2> Mass percent </h2>
-    Mass of solute : <input type="text" id="e" /><br>
-    Mass of solution : <input type="text" id="f" /><br>
+    Mass of solute : <input type="number" id="e" /><br>
+    Mass of solution : <input type="number" id="f" /><br>
     <button onclick="fn3()" id = "btn1" class="btn btn-outline-light"> Click Me </button>
     
-    <h3 id="demo2"></h1> 
-
+    <h3 id="demo2"></h3> 
+        </div>
 </div>
 
 <div class="hide" id="div4">
-
+    <div class="transbox">
     <h2> Volume Percent </h2>
-    Volume of Solute : <input type="text" id="g" /><br>
-    Volume of solution : <input type="text" id="h" /><br>
+    Volume of Solute : <input type="number" id="g" /><br>
+    Volume of solution : <input type="number" id="h" /><br>
     <button onclick="fn4()" id = "btn1" class="btn btn-outline-light"> Click Me </button>
     
-    <h3 id="demo3"></h1> 
-
+    <h3 id="demo3"></h3> 
+    </div>
 </div>
 
 <div class="hide" id="div5">
-
+    <div class="transbox">
     <h2> Parts per million </h2>
-    Mass of solute : <input type="text" id="i" /><br>
-    Mass of solution : <input type="text" id="j" /><br>
+    Mass of solute : <input type="number" id="i" /><br>
+    Mass of solution : <input type="number" id="j" /><br>
     <button onclick="fn5()" id = "btn1" class="btn btn-outline-light"> Click Me </button>
     
-    <h3 id="demo4"></h1> 
-
+    <h3 id="demo4"></h3> 
+    </div>
 </div>
 
 <div class="hide" id="div6">
-
+    <div class="transbox">
     <h2> Parts per billion </h2>
-    Mass of solute : <input type="text" id="k" /><br>
-    Mass of solution : <input type="text" id="l" /><br>
+    Mass of solute : <input type="number" id="k" /><br>
+    Mass of solution : <input type="number" id="l" /><br>
     <button onclick="fn6()" id = "btn1" class="btn btn-outline-light"> Click Me </button>
     
-    <h3 id="demo5"></h1> 
-
+    <h3 id="demo5"></h3> 
+    </div>
 </div>
 
 <div class="hide" id="div7">
-
+    <div class="transbox">
     <h2> Mole Fraction </h2>
-    Moles of A : <input type="text" id="m" /><br>
-    Total Moles of all substances : <input type="text" id="n" /><br>
+    Moles of A : <input type="number" id="m" /><br>
+    Total Moles of all substances : <input type="number" id="n" /><br>
     <button onclick="fn7()" id = "btn1" class="btn btn-outline-light"> Click Me </button>
     
-    <h3 id="demo6"></h1> 
-
+    <h3 id="demo6"></h3> 
+    </div>
 </div>
-
+<p>**Refresh page to select new term.</p>
 </center>
 </div>
 
@@ -157,55 +201,55 @@ document.getElementById(choice).style.display="block"
 function fn1() {
   var str1 = parseFloat(document.getElementById("a").value);
   var str2 = parseFloat(document.getElementById("b").value);
-  var str3 = str1/str2;
-  document.getElementById("demo").innerHTML = "Molarity is " + str3 + "M";
+  var str3 = (str1/str2).toFixed(4);
+  document.getElementById("demo").innerHTML = "Molarity is " + str3 + " M";
   
 }
 
 function fn2() {
   var str1 = parseFloat(document.getElementById("c").value);
   var str2 = parseFloat(document.getElementById("d").value);
-  var str3 = str1/str2;
-  document.getElementById("demo1").innerHTML = "Molality is " + str3 + "molal";
+  var str3 = (str1/str2).toFixed(4);
+  document.getElementById("demo1").innerHTML = "Molality is " + str3 + " molal";
   
 }
 
 function fn3() {
   var str1 = parseFloat(document.getElementById("e").value);
   var str2 = parseFloat(document.getElementById("f").value);
-  var str3 = str1/str2;
-  document.getElementById("demo2").innerHTML = "Mass percent is " + str3*100 + "%";
+  var str3 = (str1/str2).toFixed(4);
+  document.getElementById("demo2").innerHTML = "Mass percent is " + str3*100 + " %";
   
 }
 
 function fn4() {
   var str1 = parseFloat(document.getElementById("g").value);
   var str2 = parseFloat(document.getElementById("h").value);
-  var str3 = str1/str2;
-  document.getElementById("demo3").innerHTML = "Volume percent is " + str3*100 + "%";
+  var str3 = (str1/str2).toFixed(4);
+  document.getElementById("demo3").innerHTML = "Volume percent is " + str3*100 + " %";
   
 }
 
 function fn5() {
   var str1 = parseFloat(document.getElementById("i").value);
   var str2 = parseFloat(document.getElementById("j").value);
-  var str3 = str1/str2;
-  document.getElementById("demo4").innerHTML = str3*1000000 + "ppm";
+  var str3 = (str1/str2).toFixed(4);
+  document.getElementById("demo4").innerHTML = str3*1000000 + " ppm";
   
 }
 
 function fn6() {
   var str1 = parseFloat(document.getElementById("k").value);
   var str2 = parseFloat(document.getElementById("l").value);
-  var str3 = str1/str2;
-  document.getElementById("demo5").innerHTML = str3*1000000000 + "ppb";
+  var str3 = (str1/str2).toFixed(4);
+  document.getElementById("demo5").innerHTML = str3*1000000000 + " ppb";
   
 }
 
 function fn7() {
   var str1 = parseFloat(document.getElementById("m").value);
   var str2 = parseFloat(document.getElementById("n").value);
-  var str3 = str1/str2;
+  var str3 = (str1/str2).toFixed(4);
   document.getElementById("demo6").innerHTML = "Mole fraction " + str3;
   
 }
